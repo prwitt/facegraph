@@ -1,0 +1,96 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "PrimaryRegion_location": {
+            "value": "westus"
+        },
+        "SecondaryRegion_location": {
+            "value": "eastus"
+        },
+        "PrimaryRegion_MSInsights_location": {
+            "value": "eastus"
+        },
+        "IPdomainNameLabel": {
+            "value": "pip-uw-smilemein-qa"
+        },
+        "databaseAccounts_cosmos_name": {
+            "value": "cdb-uw-smilemein-qa"
+        },
+        "databaseAccounts_cosmos_name_1": {
+            "value": "cdb-uw-smilemein-qa"
+        },
+        "Redis_cachedb_name": {
+            "value": "rdc-uw-smilemein-qa"
+        },
+        "serverfarms_appserviceplan_name": {
+            "value": "aplan-uw-smilemein-qa"
+        },
+        "sites_fgtwilioapi_name": {
+            "value": "app-uw-twilio-qa"
+        },
+        "components_twilioapi_name": {
+            "value": "app-uw-twilio-qa"
+        },
+        "sites_portalsmilemein_name": {
+            "value": "app-uw-portal-qa"
+        },
+        "components_portalsmilemein_name": {
+            "value": "app-uw-portal-qa"
+        },
+        "sites_fgxamarinapp_name": {
+            "value": "app-uw-xamarin-qa"
+        },
+        "components_fgxamarinapp_name": {
+            "value": "app-uw-xamarin-qa"
+        },
+        "storageAccounts_main_name": {
+            "value": "smlxyzqa001"
+        },
+        "storageAccounts_backupacct_name": {
+            "value": "bkpsmlxyzqa001"
+        },
+        "accounts_visionapi_name": {
+            "value": "fg_vision"
+        },
+        "trafficManagerProfiles_fg_atm_name": {
+            "value": "atm-smilemein-qa"
+        },
+        "applicationGateways_appgw_name": {
+            "value": "agw-uw-smilemein-qa"
+        },
+        "publicIPAddresses_appgw_ip_name": {
+            "value": "pip-appgw"
+        },
+        "virtualNetwork_name": {
+            "value": "vnet-uw-smilemein-qa"
+        },
+        "virtualNetwork_Address_Prefix": {
+            "value": "172.16.0.0/16"
+        },
+        "subnet_name": {
+            "value": "subnet-1"
+        },
+        "Subnet1_Address_Prefix": {
+            "value": "172.16.1.0/24"
+        },
+        "config_web_name": {
+            "value": "web"
+        },
+        "config_web_name_1": {
+            "value": "web"
+        },
+        "config_web_name_2": {
+            "value": "web"
+        },
+        "hostNameBindings_fgtwilioapi.azurewebsites.net_name": {
+            "value": "app-uw-twilio-qa.azurewebsites.net"
+        },
+        "hostNameBindings_portalsmilemein.azurewebsites.net_name": {
+            "value": "app-uw-portal-qa.azurewebsites.net"
+        },
+        "hostNameBindings_fgxamarin.azurewebsites.net_name": {
+            "value": "app-uw-xamarin-qa.azurewebsites.net"
+        }
+    }
+}
