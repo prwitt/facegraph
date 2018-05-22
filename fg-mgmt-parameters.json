@@ -1,0 +1,45 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "PrimaryRegion_location": {
+            "value": "westus"
+        },
+        "SecondaryRegion_location": {
+            "value": "eastus"
+        },
+        "PrimaryRegion_MSInsights_location": {
+            "value": "eastus"
+        },
+        "sites_app_apiep_name": {
+            "value": "app-uw-apiep-qa"
+        },
+        "serverfarms_appserviceplan_name": {
+            "value": "aplan-eu-smilemein-qa"
+        },
+        "sites_app_apiep_bkp_name": {
+            "value": "app-uw-apiep-bkp-qa"
+        },
+        "serverfarms_appserviceplan_bkp_name": {
+            "value": "aplan-eu-smilemein-bkp-qa"
+        },
+        "components_app_apiep_name": {
+            "value": "app-uw-apiep-qa"
+        },
+        "config_web_name": {
+            "value": "web"
+        },
+        "components_app_apiep_bkp_name": {
+            "value": "app-uw-apiep-bkp-qa"
+        },
+        "config_web_name_1": {
+            "value": "web"
+        },
+        "hostNameBindings_app_apiep.azurewebsites.net_name": {
+            "value": "app-uw-apiep-qa.azurewebsites.net"
+        },
+        "hostNameBindings_app_apiep_bkp.azurewebsites.net_name": {
+            "value": "app-uw-apiep-qa-bkp.azurewebsites.net"
+        }
+    }
+}
