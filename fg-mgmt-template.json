@@ -39,7 +39,7 @@
             "type": "string"
         },
         "components_app_apiep_bkp_name": {
-            "defaultValue": "app-uw-apiep-bkp-qa",
+            "defaultValue": "app-eu-apiep-bkp-qa",
             "type": "string"
         },
         "config_web_name_1": {
@@ -51,7 +51,7 @@
             "type": "string"
         },
         "hostNameBindings_app_apiep_bkp.azurewebsites.net_name": {
-            "defaultValue": "app-uw-apiep-qa-bkp.azurewebsites.net",
+            "defaultValue": "app-eu-apiep-bkp-qa.azurewebsites.net",
             "type": "string"
         }
     },

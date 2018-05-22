@@ -36,4 +36,9 @@ resourceGroupLocation="westus"
 
 az group create --name $resourceGroupName --location $resourceGroupLocation
 
+resourceGroupNameMgmt="rg-smilemein-mgmt-qa"
+resourceGroupLocationMgmt="westus"
+
+az group create --name $resourceGroupNameMgmt --location $resourceGroupLocationMgmt
+
 #az group deployment create -g $resourceGroupName --template-file stg1.json --parameters stg1-param.json

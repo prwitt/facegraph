@@ -15,7 +15,7 @@
             "value": "app-uw-apiep-qa"
         },
         "serverfarms_appserviceplan_name": {
-            "value": "aplan-eu-smilemein-qa"
+            "value": "aplan-uw-smilemein-qa"
         },
         "sites_app_apiep_bkp_name": {
             "value": "app-uw-apiep-bkp-qa"
@@ -30,7 +30,7 @@
             "value": "web"
         },
         "components_app_apiep_bkp_name": {
-            "value": "app-uw-apiep-bkp-qa"
+            "value": "app-eu-apiep-bkp-qa"
         },
         "config_web_name_1": {
             "value": "web"
@@ -39,7 +39,7 @@
             "value": "app-uw-apiep-qa.azurewebsites.net"
         },
         "hostNameBindings_app_apiep_bkp.azurewebsites.net_name": {
-            "value": "app-uw-apiep-qa-bkp.azurewebsites.net"
+            "value": "app-eu-apiep-bkp-qa.azurewebsites.net"
         }
     }
 }
