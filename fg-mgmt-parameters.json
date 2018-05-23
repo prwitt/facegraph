@@ -11,35 +11,35 @@
         "PrimaryRegion_MSInsights_location": {
             "value": "eastus"
         },
-        "sites_app_apiep_name": {
+        "sites_app_uw_apiep_qa_name": {
             "value": "app-uw-apiep-qa"
         },
-        "serverfarms_appserviceplan_name": {
-            "value": "aplan-uw-smilemein-qa"
-        },
-        "sites_app_apiep_bkp_name": {
+        "sites_app_uw_apiep_bkp_qa_name": {
             "value": "app-uw-apiep-bkp-qa"
         },
-        "serverfarms_appserviceplan_bkp_name": {
-            "value": "aplan-eu-smilemein-bkp-qa"
-        },
-        "components_app_apiep_name": {
+        "components_app_uw_apiep_qa_name": {
             "value": "app-uw-apiep-qa"
         },
         "config_web_name": {
             "value": "web"
         },
-        "components_app_apiep_bkp_name": {
+        "serverfarms_aplan_uw_smilemein_qa_name": {
+            "value": "aplan-uw-smilemein-qa"
+        },
+        "components_app_eu_apiep_bkp_qa_name": {
             "value": "app-eu-apiep-bkp-qa"
         },
         "config_web_name_1": {
             "value": "web"
         },
-        "hostNameBindings_app_apiep.azurewebsites.net_name": {
+        "serverfarms_aplan_eu_smilemein_bkp_qa_name": {
+            "value": "aplan-eu-smilemein-bkp-qa"
+        },
+        "hostNameBindings_app_uw_apiep_qa.azurewebsites.net_name": {
             "value": "app-uw-apiep-qa.azurewebsites.net"
         },
-        "hostNameBindings_app_apiep_bkp.azurewebsites.net_name": {
-            "value": "app-eu-apiep-bkp-qa.azurewebsites.net"
+        "hostNameBindings_app_uw_apiep_bkp_qa.azurewebsites.net_name": {
+            "value": "app-uw-apiep-bkp-qa.azurewebsites.net"
         }
     }
 }

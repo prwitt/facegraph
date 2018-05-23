@@ -14,45 +14,45 @@
             "defaultValue": "eastus",
             "type": "string"
         },
-        "sites_app_apiep_name": {
+        "sites_app_uw_apiep_qa_name": {
             "defaultValue": "app-uw-apiep-qa",
-            "type": "string"
+            "type": "String"
         },
-        "serverfarms_appserviceplan_name": {
-            "defaultValue": "aplan-eu-smilemein-qa",
-            "type": "string"
-        },
-        "sites_app_apiep_bkp_name": {
+        "sites_app_uw_apiep_bkp_qa_name": {
             "defaultValue": "app-uw-apiep-bkp-qa",
-            "type": "string"
+            "type": "String"
         },
-        "serverfarms_appserviceplan_bkp_name": {
-            "defaultValue": "aplan-eu-smilemein-bkp-qa",
-            "type": "string"
-        },
-        "components_app_apiep_name": {
+        "components_app_uw_apiep_qa_name": {
             "defaultValue": "app-uw-apiep-qa",
-            "type": "string"
+            "type": "String"
         },
         "config_web_name": {
             "defaultValue": "web",
-            "type": "string"
+            "type": "String"
         },
-        "components_app_apiep_bkp_name": {
+        "serverfarms_aplan_uw_smilemein_qa_name": {
+            "defaultValue": "aplan-uw-smilemein-qa",
+            "type": "String"
+        },
+        "components_app_eu_apiep_bkp_qa_name": {
             "defaultValue": "app-eu-apiep-bkp-qa",
-            "type": "string"
+            "type": "String"
         },
         "config_web_name_1": {
             "defaultValue": "web",
-            "type": "string"
+            "type": "String"
         },
-        "hostNameBindings_app_apiep.azurewebsites.net_name": {
+        "serverfarms_aplan_eu_smilemein_bkp_qa_name": {
+            "defaultValue": "aplan-eu-smilemein-bkp-qa",
+            "type": "String"
+        },
+        "hostNameBindings_app_uw_apiep_qa.azurewebsites.net_name": {
             "defaultValue": "app-uw-apiep-qa.azurewebsites.net",
-            "type": "string"
+            "type": "String"
         },
-        "hostNameBindings_app_apiep_bkp.azurewebsites.net_name": {
-            "defaultValue": "app-eu-apiep-bkp-qa.azurewebsites.net",
-            "type": "string"
+        "hostNameBindings_app_uw_apiep_bkp_qa.azurewebsites.net_name": {
+            "defaultValue": "app-uw-apiep-bkp-qa.azurewebsites.net",
+            "type": "String"
         }
     },
     "variables": {},
@@ -61,7 +61,7 @@
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "microsoft.insights/components",
             "kind": "web",
-            "name": "[parameters('components_app_apiep_name')]",
+            "name": "[parameters('components_app_eu_apiep_bkp_qa_name')]",
             "apiVersion": "2015-05-01",
             "location": "[parameters('PrimaryRegion_MSInsights_location')]",
             "tags": {},
@@ -79,7 +79,7 @@
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "microsoft.insights/components",
             "kind": "web",
-            "name": "[parameters('components_app_apiep_bkp_name')]",
+            "name": "[parameters('components_app_uw_apiep_qa_name')]",
             "apiVersion": "2015-05-01",
             "location": "[parameters('PrimaryRegion_MSInsights_location')]",
             "tags": {},
@@ -104,12 +104,12 @@
                 "capacity": 1
             },
             "kind": "app",
-            "name": "[parameters('serverfarms_appserviceplan_bkp_name')]",
+            "name": "[parameters('serverfarms_aplan_uw_smilemein_qa_name')]",
             "apiVersion": "2016-09-01",
-            "location": "[parameters('SecondaryRegion_location')]",
+            "location": "[parameters('PrimaryRegion_location')]",
             "scale": null,
             "properties": {
-                "name": "[parameters('serverfarms_appserviceplan_bkp_name')]",
+                "name": "[parameters('serverfarms_aplan_uw_smilemein_qa_name')]",
                 "workerTierName": null,
                 "adminSiteName": null,
                 "hostingEnvironmentProfile": null,
@@ -131,12 +131,12 @@
                 "capacity": 1
             },
             "kind": "app",
-            "name": "[parameters('serverfarms_appserviceplan_name')]",
+            "name": "[parameters('serverfarms_aplan_eu_smilemein_bkp_qa_name')]",
             "apiVersion": "2016-09-01",
-            "location": "[parameters('PrimaryRegion_location')]",
+            "location": "[parameters('SecondaryRegion_location')]",
             "scale": null,
             "properties": {
-                "name": "[parameters('serverfarms_appserviceplan_name')]",
+                "name": "[parameters('serverfarms_aplan_eu_smilemein_bkp_qa_name')]",
                 "workerTierName": null,
                 "adminSiteName": null,
                 "hostingEnvironmentProfile": null,
@@ -151,16 +151,16 @@
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "Microsoft.Web/sites",
             "kind": "app",
-            "name": "[parameters('sites_app_apiep_name')]",
+            "name": "[parameters('sites_app_uw_apiep_bkp_qa_name')]",
             "apiVersion": "2016-08-01",
-            "location": "[parameters('PrimaryRegion_location')]",
+            "location": "[parameters('SecondaryRegion_location')]",
             "tags": {},
             "scale": null,
             "properties": {
                 "enabled": true,
                 "hostNameSslStates": [
                     {
-                        "name": "[concat(parameters('sites_app_apiep_name'),'.azurewebsites.net')]",
+                        "name": "[concat(parameters('sites_app_uw_apiep_bkp_qa_name'),'.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "virtualIP": null,
                         "thumbprint": null,
@@ -168,7 +168,7 @@
                         "hostType": "Standard"
                     },
                     {
-                        "name": "[concat(parameters('sites_app_apiep_name'),'.scm.azurewebsites.net')]",
+                        "name": "[concat(parameters('sites_app_uw_apiep_bkp_qa_name'),'.scm.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "virtualIP": null,
                         "thumbprint": null,
@@ -176,7 +176,7 @@
                         "hostType": "Repository"
                     }
                 ],
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_appserviceplan_name'))]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_aplan_eu_smilemein_bkp_qa_name'))]",
                 "reserved": false,
                 "siteConfig": null,
                 "scmSiteAlsoStopped": false,
@@ -189,23 +189,23 @@
                 "cloningInfo": null
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_appserviceplan_name'))]"
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_aplan_eu_smilemein_bkp_qa_name'))]"
             ]
         },
         {
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "Microsoft.Web/sites",
             "kind": "app",
-            "name": "[parameters('sites_app_apiep_bkp_name')]",
+            "name": "[parameters('sites_app_uw_apiep_qa_name')]",
             "apiVersion": "2016-08-01",
-            "location": "[parameters('SecondaryRegion_location')]",
+            "location": "[parameters('PrimaryRegion_location')]",
             "tags": {},
             "scale": null,
             "properties": {
                 "enabled": true,
                 "hostNameSslStates": [
                     {
-                        "name": "[concat(parameters('sites_app_apiep_bkp_name'),'.azurewebsites.net')]",
+                        "name": "[concat(parameters('sites_app_uw_apiep_qa_name'),'.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "virtualIP": null,
                         "thumbprint": null,
@@ -213,7 +213,7 @@
                         "hostType": "Standard"
                     },
                     {
-                        "name": "[concat(parameters('sites_app_apiep_bkp_name'),'.scm.azurewebsites.net')]",
+                        "name": "[concat(parameters('sites_app_uw_apiep_qa_name'),'.scm.azurewebsites.net')]",
                         "sslState": "Disabled",
                         "virtualIP": null,
                         "thumbprint": null,
@@ -221,7 +221,7 @@
                         "hostType": "Repository"
                     }
                 ],
-                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_appserviceplan_bkp_name'))]",
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_aplan_uw_smilemein_qa_name'))]",
                 "reserved": false,
                 "siteConfig": null,
                 "scmSiteAlsoStopped": false,
@@ -234,15 +234,15 @@
                 "cloningInfo": null
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_appserviceplan_bkp_name'))]"
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverfarms_aplan_uw_smilemein_qa_name'))]"
             ]
         },
         {
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "Microsoft.Web/sites/config",
-            "name": "[concat(parameters('sites_app_apiep_name'), '/', parameters('config_web_name'))]",
+            "name": "[concat(parameters('sites_app_uw_apiep_bkp_qa_name'), '/', parameters('config_web_name_1'))]",
             "apiVersion": "2016-08-01",
-            "location": "[parameters('PrimaryRegion_location')]",
+            "location": "[parameters('SecondaryRegion_location')]",
             "tags": {},
             "scale": null,
             "properties": {
@@ -266,11 +266,11 @@
                 "windowsFxVersion": null,
                 "requestTracingEnabled": false,
                 "remoteDebuggingEnabled": false,
-                "remoteDebuggingVersion": null,
+                "remoteDebuggingVersion": "VS2012",
                 "httpLoggingEnabled": false,
                 "logsDirectorySizeLimit": 35,
                 "detailedErrorLoggingEnabled": false,
-                "publishingUsername": "$facegapiv2",
+                "publishingUsername": "$app-uw-apiep-bkp-qa",
                 "publishingPassword": null,
                 "appSettings": null,
                 "metadata": null,
@@ -349,31 +349,31 @@
                 "ftpsState": "AllAllowed"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_app_apiep_name'))]"
+                "[resourceId('Microsoft.Web/sites', parameters('sites_app_uw_apiep_bkp_qa_name'))]"
             ]
         },
         {
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "Microsoft.Web/sites/hostNameBindings",
-            "name": "[concat(parameters('sites_app_apiep_name'), '/', parameters('hostNameBindings_app_apiep.azurewebsites.net_name'))]",
+            "name": "[concat(parameters('sites_app_uw_apiep_bkp_qa_name'), '/', parameters('hostNameBindings_app_uw_apiep_bkp_qa.azurewebsites.net_name'))]",
             "apiVersion": "2016-08-01",
-            "location": "[parameters('PrimaryRegion_location')]",
+            "location": "[parameters('SecondaryRegion_location')]",
             "scale": null,
             "properties": {
-                "siteName": "facegapiv2",
+                "siteName": "app-uw-apiep-bkp-qa",
                 "domainId": null,
                 "hostNameType": "Verified"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_app_apiep_name'))]"
+                "[resourceId('Microsoft.Web/sites', parameters('sites_app_uw_apiep_bkp_qa_name'))]"
             ]
         },
         {
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "Microsoft.Web/sites/config",
-            "name": "[concat(parameters('sites_app_apiep_bkp_name'), '/', parameters('config_web_name_1'))]",
+            "name": "[concat(parameters('sites_app_uw_apiep_qa_name'), '/', parameters('config_web_name'))]",
             "apiVersion": "2016-08-01",
-            "location": "[parameters('SecondaryRegion_location')]",
+            "location": "[parameters('PrimaryRegion_location')]",
             "tags": {},
             "scale": null,
             "properties": {
@@ -397,11 +397,11 @@
                 "windowsFxVersion": null,
                 "requestTracingEnabled": false,
                 "remoteDebuggingEnabled": false,
-                "remoteDebuggingVersion": null,
+                "remoteDebuggingVersion": "VS2012",
                 "httpLoggingEnabled": false,
                 "logsDirectorySizeLimit": 35,
                 "detailedErrorLoggingEnabled": false,
-                "publishingUsername": "$facegapiv2-bkp",
+                "publishingUsername": "$app-uw-apiep-qa",
                 "publishingPassword": null,
                 "appSettings": null,
                 "metadata": null,
@@ -480,23 +480,23 @@
                 "ftpsState": "AllAllowed"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_app_apiep_bkp_name'))]"
+                "[resourceId('Microsoft.Web/sites', parameters('sites_app_uw_apiep_qa_name'))]"
             ]
         },
         {
             "comments": "FaceGraph Platform Implementation for SmileMeIn",
             "type": "Microsoft.Web/sites/hostNameBindings",
-            "name": "[concat(parameters('sites_app_apiep_bkp_name'), '/', parameters('hostNameBindings_app_apiep_bkp.azurewebsites.net_name'))]",
+            "name": "[concat(parameters('sites_app_uw_apiep_qa_name'), '/', parameters('hostNameBindings_app_uw_apiep_qa.azurewebsites.net_name'))]",
             "apiVersion": "2016-08-01",
-            "location": "[parameters('SecondaryRegion_location')]",
+            "location": "[parameters('PrimaryRegion_location')]",
             "scale": null,
             "properties": {
-                "siteName": "facegapiv2-bkp",
+                "siteName": "app-uw-apiep-qa",
                 "domainId": null,
                 "hostNameType": "Verified"
             },
             "dependsOn": [
-                "[resourceId('Microsoft.Web/sites', parameters('sites_app_apiep_bkp_name'))]"
+                "[resourceId('Microsoft.Web/sites', parameters('sites_app_uw_apiep_qa_name'))]"
             ]
         }
     ]
