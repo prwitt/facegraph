@@ -17,9 +17,6 @@
         "databaseAccounts_cosmos_name": {
             "value": "cdb-uw-smilemein-qa"
         },
-        "databaseAccounts_cosmos_name_1": {
-            "value": "cdb-uw-smilemein-qa"
-        },
         "Redis_cachedb_name": {
             "value": "rdc-uw-smilemein-qa"
         },
