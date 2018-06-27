@@ -12,55 +12,55 @@
             "value": "eastus"
         },
         "IPdomainNameLabel": {
-            "value": "pip-uw-smilemein-qa"
+            "value": "pip-uw-smilemein-prod"
         },
         "databaseAccounts_cosmos_name": {
-            "value": "cdb-uw-smilemein-qa"
+            "value": "cdb-uw-smilemein-prod"
         },
         "Redis_cachedb_name": {
-            "value": "rdc-uw-smilemein-qa"
+            "value": "rdc-uw-smilemein-prod"
         },
         "serverfarms_appserviceplan_name": {
-            "value": "aplan-uw-smilemein-qa"
+            "value": "aplan-uw-smilemein-prod"
         },
         "sites_fgtwilioapi_name": {
-            "value": "app-uw-twilio-qa"
+            "value": "app-uw-twilio-prod"
         },
         "components_twilioapi_name": {
-            "value": "app-uw-twilio-qa"
+            "value": "app-uw-twilio-prod"
         },
         "sites_portalsmilemein_name": {
-            "value": "app-uw-portal-qa"
+            "value": "app-uw-portal-prod"
         },
         "components_portalsmilemein_name": {
-            "value": "app-uw-portal-qa"
+            "value": "app-uw-portal-prod"
         },
         "sites_fgxamarinapp_name": {
-            "value": "app-uw-xamarin-qa"
+            "value": "app-uw-xamarin-prod"
         },
         "components_fgxamarinapp_name": {
-            "value": "app-uw-xamarin-qa"
+            "value": "app-uw-xamarin-prod"
         },
         "storageAccounts_main_name": {
-            "value": "smlxyzqa001"
+            "value": "smlxyzprod001"
         },
         "storageAccounts_backupacct_name": {
-            "value": "bkpsmlxyzqa001"
+            "value": "bkpsmlxyzprod001"
         },
         "accounts_visionapi_name": {
             "value": "fg_vision"
         },
         "trafficManagerProfiles_fg_atm_name": {
-            "value": "atm-smilemein-qa"
+            "value": "atm-smilemein-prod"
         },
         "applicationGateways_appgw_name": {
-            "value": "agw-uw-smilemein-qa"
+            "value": "agw-uw-smilemein-prod"
         },
         "publicIPAddresses_appgw_ip_name": {
-            "value": "pip-appgw"
+            "value": "pip-appgw-prod"
         },
         "virtualNetwork_name": {
-            "value": "vnet-uw-smilemein-qa"
+            "value": "vnet-uw-smilemein-prod"
         },
         "virtualNetwork_Address_Prefix": {
             "value": "172.16.0.0/16"
@@ -81,13 +81,13 @@
             "value": "web"
         },
         "hostNameBindings_fgtwilioapi.azurewebsites.net_name": {
-            "value": "app-uw-twilio-qa.azurewebsites.net"
+            "value": "app-uw-twilio-prod.azurewebsites.net"
         },
         "hostNameBindings_portalsmilemein.azurewebsites.net_name": {
-            "value": "app-uw-portal-qa.azurewebsites.net"
+            "value": "app-uw-portal-prod.azurewebsites.net"
         },
         "hostNameBindings_fgxamarin.azurewebsites.net_name": {
-            "value": "app-uw-xamarin-qa.azurewebsites.net"
+            "value": "app-uw-xamarin-prod.azurewebsites.net"
         }
     }
 }
